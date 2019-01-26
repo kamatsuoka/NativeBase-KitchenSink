@@ -8,6 +8,10 @@ const launchscreenBg = require("../../../assets/launchscreen-bg.png");
 const launchscreenLogo = require("../../../assets/logo-kitchen-sink.png");
 
 class Home extends Component {
+  constructor(props) {
+    super(props)
+  }
+
   render() {
     return (
       <Container>
@@ -31,9 +35,9 @@ class Home extends Component {
           <View style={{ marginBottom: 80 }}>
             <Button
               style={{ backgroundColor: "#6FAF98", alignSelf: "center" }}
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
+              onPress={() => this.props.navigation.toggleDrawer()}
             >
-              <Text>Lets Go!</Text>
+              <Text>Let's Go!</Text>
             </Button>
           </View>
         </ImageBackground>
